@@ -1,6 +1,6 @@
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { MDBInput } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
@@ -30,6 +30,7 @@ function Register() {
               
                     username: username, // Save username if collected
                     email: email,
+                    date:serverTimestamp()
                   
                     
                     // Add other user data as needed
@@ -44,6 +45,7 @@ function Register() {
               
                     username: username, // Save username if collected
                     email: email,
+                    date:serverTimestamp()
                   
                     
                     // Add other user data as needed

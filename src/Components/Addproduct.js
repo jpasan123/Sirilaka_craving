@@ -11,6 +11,7 @@ import Table from 'react-bootstrap/Table';
 import CategoryService from "../Services/category_service";
 import ProductService from '../Services/product_service';
 import Product from '../Models/product';
+import { serverTimestamp } from 'firebase/firestore';
 
 initMDB({ Input });
 export default function Addproduct() {
@@ -65,6 +66,7 @@ export default function Addproduct() {
       product.description = description;
       product.category = selectedCategory;
       product.image = imageBase64;
+      product.date =serverTimestamp();
       product.price = parseFloat(price);
       await ProductService.addProduct(product);
       const updatedProducts = await ProductService.getAllProducts();

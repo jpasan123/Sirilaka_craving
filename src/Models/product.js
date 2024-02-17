@@ -1,6 +1,8 @@
+import { serverTimestamp } from "firebase/firestore";
+
 class Product {
 
-    constructor(id, name, description, category,image,price) {
+    constructor(id, name, description, category,image,price,date) {
 
  
         this.id = id;
@@ -8,6 +10,7 @@ class Product {
         this.description = description;
         this.category = category;
         this.image = image;
+        this.date=date;
         this.price=price;
 
     }
@@ -18,7 +21,9 @@ class Product {
             'description': this.description,
             'category': this.category,
             'image': this.image,
+            'date': this.date,
             'price': this.price
+            
 
         }
     }
