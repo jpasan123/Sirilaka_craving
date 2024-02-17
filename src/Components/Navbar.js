@@ -22,7 +22,8 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
    
   
   
-if(location.pathname==="/addProducts" ||location.pathname==="/addproducts"  || location.pathname=="/deleteProducts"  || location.pathname=="/updateProducts" || location.pathname=="/Reports"){
+if(location.pathname==="/addProducts" ||location.pathname==="/addproducts"  || location.pathname=="/deleteProducts"  || location.pathname=="/updateProducts" || location.pathname=="/Reports"
+|| location.pathname=="/Adminhome"){
 
  return null;
 }

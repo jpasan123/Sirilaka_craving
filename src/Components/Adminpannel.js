@@ -71,7 +71,10 @@ export default function Adminpannel() {
             </Row>
           </Container>
           <br />
-
+            
+          <Link to="/Adminhome" className="sidenav-link" style={{ fontSize: '20px', marginLeft: '20px' }}  onClick={handleLinkClick}>
+          Home
+          </Link>
           <Link to="/addProducts" className="sidenav-link" style={{ fontSize: '20px', marginLeft: '20px' }}  onClick={handleLinkClick}>
             Add Products
           </Link>
@@ -89,6 +92,10 @@ export default function Adminpannel() {
           <Link to="/Reports" className="sidenav-link" style={{ fontSize: '20px', marginLeft: '20px' }}  onClick={handleLinkClick}>
             Reports
           </Link>
+
+
+
+        
         </div>
         <div className="col-md-9 content">
           {/* The content of the page */}
